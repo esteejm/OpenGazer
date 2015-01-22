@@ -44,7 +44,10 @@ elif [[ "$(uname)" == "Darwin" ]] ; then
   fi
 
   brew tap homebrew/science
-  brew install gtkmm cairomm gsl cmake ffmpeg opencv fann boost
+  
+  brew install gtkmm cairomm gsl cmake ffmpeg fann boost
+  export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+  brew install opencv --env=std
 
 fi
 
